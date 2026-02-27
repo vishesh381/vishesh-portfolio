@@ -191,21 +191,29 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="hidden lg:flex items-center justify-center relative w-[420px] h-[420px] shrink-0"
+            className="hidden lg:flex items-center justify-center relative w-[480px] h-[480px] shrink-0"
           >
             {/* Center Card — Profile Picture */}
-            <div className="absolute z-10 w-40 h-40 rounded-full p-[3px] bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-purple)] shadow-neon">
-              <div className="w-full h-full rounded-full overflow-hidden border-2 border-[var(--color-bg)]">
+            <div
+              className="absolute z-10 rounded-full shadow-neon"
+              style={{
+                width: '260px',
+                height: '260px',
+                padding: '3px',
+                background: 'linear-gradient(135deg, var(--color-accent), var(--color-purple))',
+              }}
+            >
+              <div className="w-full h-full rounded-full overflow-hidden" style={{ border: '2px solid var(--color-bg)' }}>
                 <img
                   src="/userPic.jpg"
                   alt="Vishesh Sharma"
-                  className="w-full h-full object-cover object-top"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
                 />
               </div>
             </div>
 
             {/* Orbit Rings */}
-            {[140, 195].map((radius, ri) => (
+            {[160, 210].map((radius, ri) => (
               <div
                 key={ri}
                 className="absolute rounded-full border border-dashed"
@@ -222,7 +230,7 @@ export default function Hero() {
             {floatingTech.map((tech, i) => {
               const total = floatingTech.length;
               const angle = (i / total) * 360;
-              const radius = i % 2 === 0 ? 140 : 195;
+              const radius = i % 2 === 0 ? 160 : 210;
               const rad = (angle * Math.PI) / 180;
               const x = Math.cos(rad) * radius;
               const y = Math.sin(rad) * radius;
