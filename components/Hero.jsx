@@ -54,6 +54,34 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left max-w-2xl">
+
+            {/* Mobile Profile Photo — hidden on desktop */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7 }}
+              className="flex lg:hidden justify-center mb-8"
+            >
+              <div
+                className="rounded-full"
+                style={{
+                  width: '160px',
+                  height: '160px',
+                  padding: '3px',
+                  background: 'linear-gradient(135deg, var(--color-accent), var(--color-purple))',
+                  boxShadow: '0 0 30px var(--color-accent-glow)',
+                }}
+              >
+                <div className="w-full h-full rounded-full overflow-hidden" style={{ border: '2px solid var(--color-bg)' }}>
+                  <img
+                    src="/userPic.jpg"
+                    alt="Vishesh Sharma"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
