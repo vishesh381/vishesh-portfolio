@@ -193,12 +193,15 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.5 }}
             className="hidden lg:flex items-center justify-center relative w-[420px] h-[420px] shrink-0"
           >
-            {/* Center Card */}
-            <div className="absolute z-10 w-32 h-32 rounded-3xl glass gradient-border flex flex-col items-center justify-center shadow-neon">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-purple)] flex items-center justify-center mb-2">
-                <span className="font-display font-black text-white text-2xl">VS</span>
+            {/* Center Card — Profile Picture */}
+            <div className="absolute z-10 w-40 h-40 rounded-full p-[3px] bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-purple)] shadow-neon">
+              <div className="w-full h-full rounded-full overflow-hidden border-2 border-[var(--color-bg)]">
+                <img
+                  src="/profile.png"
+                  alt="Vishesh Sharma"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
-              <span className="text-[10px] font-semibold text-[var(--color-text-secondary)]">Full Stack</span>
             </div>
 
             {/* Orbit Rings */}
