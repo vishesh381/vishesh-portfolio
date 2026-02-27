@@ -197,7 +197,7 @@ export default function Hero() {
             <div className="absolute z-10 w-40 h-40 rounded-full p-[3px] bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-purple)] shadow-neon">
               <div className="w-full h-full rounded-full overflow-hidden border-2 border-[var(--color-bg)]">
                 <img
-                  src="/profile.png"
+                  src="/userPic.jpg"
                   alt="Vishesh Sharma"
                   className="w-full h-full object-cover object-top"
                 />
