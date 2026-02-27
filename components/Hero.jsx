@@ -191,14 +191,14 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="hidden lg:flex items-center justify-center relative w-[480px] h-[480px] shrink-0"
+            className="hidden lg:flex items-center justify-center relative w-[700px] h-[700px] shrink-0"
           >
             {/* Center Card — Profile Picture */}
             <div
               className="absolute z-10 rounded-full shadow-neon"
               style={{
-                width: '260px',
-                height: '260px',
+                width: '460px',
+                height: '460px',
                 padding: '3px',
                 background: 'linear-gradient(135deg, var(--color-accent), var(--color-purple))',
               }}
@@ -213,7 +213,7 @@ export default function Hero() {
             </div>
 
             {/* Orbit Rings */}
-            {[160, 210].map((radius, ri) => (
+            {[270, 330].map((radius, ri) => (
               <div
                 key={ri}
                 className="absolute rounded-full border border-dashed"
@@ -230,7 +230,7 @@ export default function Hero() {
             {floatingTech.map((tech, i) => {
               const total = floatingTech.length;
               const angle = (i / total) * 360;
-              const radius = i % 2 === 0 ? 160 : 210;
+              const radius = i % 2 === 0 ? 270 : 330;
               const rad = (angle * Math.PI) / 180;
               const x = Math.cos(rad) * radius;
               const y = Math.sin(rad) * radius;
